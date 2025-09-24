@@ -1,16 +1,12 @@
 {
-  "name": "typescript-api-template",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "API Starter Template for most of my backend projects",
+  "description": "backend service for killmath website",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsup src/*",
     "start": "node .",
-    "dev": "pnpm run build && pnpm run start",
-    "db:generate": "pnpm drizzle-kit generate",
-    "db:migrate": "pnpm drizzle-kit migrate",
-    "db:update": "pnpm drizzle-kit up",
-    "db:delete": "rm -rf src/db/migrations"
+    "dev": "pnpm run build && pnpm run start"
   },
   "keywords": [],
   "author": "",
@@ -30,7 +26,6 @@
     "base64-img": "^1.0.4",
     "bcryptjs": "^3.0.2",
     "body-parser": "^1.20.3",
-    "chalk": "4.1.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.41.0",
@@ -38,8 +33,7 @@
     "find-config": "^1.0.0",
     "helmet": "^8.1.0",
     "joi": "^17.13.3",
-    "jsonwebtoken": "^9.0.2",
-    "nanoid": "^5.1.5",
+    "pocketbase": "^0.26.2",
     "tsup": "^8.4.0"
   }
 }

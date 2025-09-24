@@ -1,4 +1,4 @@
-import chalk from "chalk";
+// import chalk from "chalk";
 
 function logWithUser(
     user: string | undefined,
@@ -17,19 +17,19 @@ function logWithUser(
 const logger = {
     info: (...data: string[]) => {
         if (data.length == 1) return logWithUser(undefined, data[0]);
-        else return logWithUser(data[0], data[1], chalk.blue.bold);
+        else return logWithUser(data[0], data[1]);
     },
     success: (...data: string[]) => {
         if (data.length == 1) return logWithUser(undefined, data[0]);
-        else return logWithUser(data[0], data[1], chalk.green.bold);
+        else return logWithUser(data[0], data[1]);
     },
     warn: (...data: string[]) => {
         if (data.length == 1) return logWithUser(undefined, data[0]);
-        else return logWithUser(data[0], data[1], chalk.green.yellow);
+        else return logWithUser(data[0], data[1]);
     },
     error: (...data: string[]) => {
         if (data.length == 1) return logWithUser(undefined, data[0]);
-        else return logWithUser(data[0], data[1], chalk.green.red);
+        else return logWithUser(data[0], data[1]);
     },
 
     symbols: {

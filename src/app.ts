@@ -9,7 +9,7 @@ const app = express();
 app.disable("x-powered-by");
 
 // Specify the allowed origins
-// const allowedOrigins = ["prodlink", "http://localhost:3000"];
+// const allowedOrigins = ["https://ocr-kh.vercel.app", "http://localhost:3000"];
 const allowedOrigins = ["0.0.0.0"]
 const corsOptions: cors.CorsOptions = {
   origin: function (origin, callback) {

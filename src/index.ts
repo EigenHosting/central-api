@@ -1,6 +1,8 @@
 import logger from "~/utils/logger";
 import app from "~/app";
 require('dotenv').config({ path: require('find-config')('.env') })
+// let port = 6969;
+
 
 logger.info("API", "Initiating listening to the port...");
 app.listen(process.env.PORT, () => {

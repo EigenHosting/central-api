@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "module": "CommonJS",
+    "target": "es2020",
+    "module": "commonjs",
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]
@@ -13,5 +13,4 @@
     "skipLibCheck": true
   },
   "include": ["src/**/*"]
-
 }
