@@ -1,0 +1,45 @@
+{
+  "name": "typescript-api-template",
+  "version": "1.0.0",
+  "description": "API Starter Template for most of my backend projects",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup src/*",
+    "start": "node .",
+    "dev": "pnpm run build && pnpm run start",
+    "db:generate": "pnpm drizzle-kit generate",
+    "db:migrate": "pnpm drizzle-kit migrate",
+    "db:update": "pnpm drizzle-kit up",
+    "db:delete": "rm -rf src/db/migrations"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.13.10",
+    "drizzle-kit": "^0.30.5",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.15.0",
+    "base64-img": "^1.0.4",
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^1.20.3",
+    "chalk": "4.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.41.0",
+    "express": "^4.21.2",
+    "find-config": "^1.0.0",
+    "helmet": "^8.1.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "nanoid": "^5.1.5",
+    "tsup": "^8.4.0"
+  }
+}
