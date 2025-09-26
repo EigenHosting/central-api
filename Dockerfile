@@ -4,8 +4,8 @@ ENV PATH="$PNPM_HOME:$PATH"
 ENV CI="true"
 
 RUN corepack enable
-COPY . /eigen-app
-WORKDIR /eigen-app
+COPY . /app
+WORKDIR /app
 
 RUN pnpm install
 
