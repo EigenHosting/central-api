@@ -1,17 +1,15 @@
-FROM node:20 AS base
-
+FROM node:20-slim AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
+ENV CI="true"
+
 RUN corepack enable
-
+COPY . /app
 WORKDIR /app
-
-COPY package*.json ./   
 
 RUN pnpm install
 
 RUN pnpm run build
 
 EXPOSE 3000
-
-CMD [ "pnpm", "run", "start" ]
+CMD [ "pnpm","run", "start" ]
