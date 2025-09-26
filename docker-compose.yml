@@ -1,0 +1,9 @@
+services:
+  app:
+    container_name: eigen-central-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    restart: always

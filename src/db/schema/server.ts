@@ -12,9 +12,9 @@ import {
 } from "drizzle-orm/pg-core";
 
 export const user = pgTable("user", {
-    handle: text().primaryKey().notNull().unique(),    
-    email: text().notNull(),
-    discord_id: text().notNull(),
-    pterodactyl_id: text().notNull(),
-    max_server_count: integer().notNull().default(1),
+    id: text().primaryKey().notNull().unique(),    
+    // type: 
+    expiry: timestamp({ mode: "date" }),
+    created_at: timestamp({ mode: "date" }),
+    updated_at: timestamp({ mode: "date" }),
 })
