@@ -18,7 +18,6 @@ services:
         networks:
             - eigen-network
     eigen-api:
-        image: node:latest 
         container_name: eigen-central-api
         ports:
         - "13000:3000"
@@ -31,16 +30,12 @@ services:
         env_file:
             - .env
         restart: always
-        working_dir: /app
-        volumes:
-            - eigen-volume:/app
         networks:
             - eigen-network
 
 
 volumes:
   app-volume:
-  eigen-volume:
 
 networks:
   eigen-network:
